@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relax Your Mood and Stress</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f8ff;
+        }
+        .content-section {
+            margin: 20px 0;
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .video-container {
+            margin-bottom: 20px;
+        }
+        .video-container video {
+            width: 100%;
+            cursor: pointer;
+            height: 200px; /* Set initial height */
+            object-fit: cover; /* Ensure videos cover the area without distortion */
+        }
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Relax Your Mood and Stress</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#audio">Audio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#video">Video</a>
+            </li>
+           
+            <li class="nav-item">
+                <class="nav-link" href="#meditation">Meditation</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="content-section" id="audio">
+        <div class="section-header">
+            <h2>Mind Relaxing Audio</h2>
+            <a href="#audio" class="btn btn-primary">Go to Audio</a>
+        </div>
+        <div class="card card-body">
+            <audio controls>
+                <source src="audio_file.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+    <div class="content-section" id="video">
+        <div class="section-header">
+            <h2>Mind Relaxing Video</h2>
+            <a href="#video" class="btn btn-primary">Go to Video</a>
+        </div>
+        <div class="card card-body">
+            <div class="row">
+                <div class="col-md-4 video-container">
+                    <div class="video-card">
+                        <video controls>
+                            <source src="./assets/images/motivational_song.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="col-md-4 video-container">
+                    <div class="video-card">
+                        <video controls>
+                            <source src="assets/images/videoplayback.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <!-- Add more video containers as needed -->
+                <div class="col-md-4 video-container">
+                    <div class="video-card">
+                        <video controls>
+                            <source src="assets/images/v1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="col-md-4 video-container">
+                    <div class="video-card">
+                        <video controls>
+                            <source src="./assets/images/v2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="col-md-4 video-container">
+                    <div class="video-card">
+                        <video controls>
+                            <source src="./assets/images/v3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="col-md-4 video-container">
+                    <div class="video-card">
+                        <video controls>
+                            <source src="./assets/images/v4.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <!-- Add more video containers as needed -->
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section" id="games">
+        <div class="section-header">
+            <h2>Relaxing Games</h2>
+            <a href="#games" class="btn btn-primary">Go to Games</a>
+        </div>
+        <div class="card card-body">
+            <!-- Add your game iframe or game content here -->
+            <iframe src="game_url" width="100%" height="500px"></iframe>
+        </div>
+    </div>
+
+    <div class="content-section" id="meditation">
+        <div class="section-header">
+            <h2>Meditation</h2>
+            <a href="#meditation" class="btn btn-primary">Go to Meditation</a>
+        </div>
+        <div class="card card-body">
+            <!-- Add your meditation content here -->
+            <p>Meditation instructions or embedded meditation videos go here.</p>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const videos = document.querySelectorAll('video');
+        videos.forEach(video => {
+            video.addEventListener('play', () => {
+                const card = video.closest('.video-card');
+                if (card.requestFullscreen) {
+                    card.requestFullscreen();
+                } else if (card.webkitRequestFullscreen) { /* Safari */
+                    card.webkitRequestFullscreen();
+                } else if (card.msRequestFullscreen) { /* IE11 */
+                    card.msRequestFullscreen();
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

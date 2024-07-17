@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Book Gallery</h1>
+        <ul>
+            <li><a href="add_to_cart.html" id="cart-link">Cart <span id="cart-count">0</span></a></li>
+        </ul>
+    </header>
+    <div class="container">
+        <!-- Initial Books -->
+        <div class="book" data-title="learn-python" data-price="0">
+            <a href="">
+                <img src="images/python1.png" alt="Book 1 Title">
+            </a>
+            <p class="book-title">
+                <a href="books/learn-python-fast-deep-simple-obooko.pdf" target="_blank">learn-python</a>
+            </p>
+            <a href="books/learn-python-fast-deep-simple-obooko.pdf" target="_blank"><button class="purchase-button">Trial for Free</button></a>
+            <a href="books/learn-python-fast-deep-simple-obooko.pdf" download="learn-python.pdf">
+                <button class="download-button">Download</button>
+            </a>
+        </div>
+        <div class="book" data-title="LINUX" data-price="0">
+            <a href="" target="_blank">
+                <img src="images/linux.png" alt="Book 2 Title">
+            </a>
+            <p class="book-title">
+                <a href="books/linux-commands-c-c++-java-python-exercise-for-beginners-obooko.pdf" target="_blank">LINUX</a>
+            </p>
+            <a href="books/linux-commands-c-c++-java-python-exercise-for-beginners-obooko.pdf" target="_blank"><button class="purchase-button">Trial for Free</button></a>
+            <a href="books/linux-commands-c-c++-java-python-exercise-for-beginners-obooko.pdf" download="LINUX.pdf">
+                <button class="download-button">Download</button>
+            </a>
+        </div>
+        <div class="book" data-title="SQL" data-price="0">
+            <a href="books/introduction-to-sql-obooko.pdf" target="_blank">
+                <img src="images/sql.png" alt="Book 3 Title">
+            </a>
+            <p class="book-title">
+                <a href="books/introduction-to-sql-obooko.pdf" target="_blank">SQL</a>
+            </p>
+            <button class="purchase-button">Purchase</button>
+        </div>
+
+        <!-- Hidden Books -->
+        <div class="book hidden" data-title="PHP" data-price="0">
+            <a href="books/php-hints-and-tips-obooko.pdf" target="_blank">
+                <img src="images/php.png" alt="Book 4 Title">
+            </a>
+            <p class="book-title">
+                <a href="books/php-hints-and-tips-obooko.pdf" target="_blank">PHP</a>
+            </p>
+            <button class="purchase-button">Purchase</button>
+        </div>
+        <div class="book hidden" data-title="C++" data-price="0">
+            <a href="books/C++.pdf" target="_blank">
+                <img src="images/C++.png" alt="Book 5 Title">
+            </a>
+            <p class="book-title">
+                <a href="books/C++.pdf" target="_blank">C++</a>
+            </p>
+            <button class="purchase-button">Purchase</button>
+        </div>
+        <div class="book hidden" data-title="FULL-STACK REACT" data-price="0">
+            <a href="books/ReactJSNotesForProfessionals.pdf" target="_blank">
+                <img src="images/React.png" alt="Book 6 Title">
+            </a>
+            <p class="book-title">
+                <a href="books/ReactJSNotesForProfessionals.pdf" target="_blank">FULL-STACK REACT</a>
+            </p>
+            <button class="purchase-button">Purchase</button>
+        </div>
+        <div class="book hidden" data-title="MEAN STACK DEVELOPMENT" data-price="0">
+            <a href="books/Pro MERN Stack.pdf" target="_blank">
+                <img src="images/MERN.png" alt="Book 7 Title">
+            </a>
+            <p class="book-title">
+                <a href="books/Pro MERN Stack.pdf" target="_blank">MEAN STACK DEVELOPMENT</a>
+            </p>
+            <button class="purchase-button">Purchase</button>
+        </div>
+        <div class="book hidden" data-title="JAVA" data-price="0">
+            <a href="books/JavaNotesForProfessionals.pdf" target="_blank">
+                <img src="images/Java.png" alt="Book 8 Title">
+            </a>
+            <p class="book-title">
+                <a href="books/JavaNotesForProfessionals.pdf" target="_blank">JAVA</a>
+            </p>
+            <button class="purchase-button">Purchase</button>
+        </div>
+        <div class="book hidden" data-title="MACHINE LEARNING WITH PYTorch AND SCIKIT-LEARN" data-price="0">
+            <a href="books/A Course in Machine Learning.pdf" target="_blank">
+                <img src="images/machine.png" alt="Book 9 Title">
+            </a>
+            <p class="book-title">
+                <a href="books/A Course in Machine Learning.pdf" target="_blank">MACHINE LEARNING WITH PYTorch AND SCIKIT-LEARN</a>
+            </p>
+            <button class="purchase-button">Purchase</button>
+        </div>
+    </div>
+    <button id="more-button">More</button>
+    <footer>
+        <p>&copy; 2024 My Book Gallery</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="add_to_cart.html">Cart <span id="cart-count">0</span></a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="cart">
+      <h2>Shopping Cart</h2>
+      <ul id="cart-items">
+        <!-- Cart items will be dynamically added here -->
+      </ul>
+      <button onclick="checkout()">Checkout</button>
+    </section>
+  </main>
+  
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="add_to_cart.html">Cart <span id="cart-count">0</span></a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="cart">
+      <h2>Shopping Cart</h2>
+      <ul id="cart-items">
+        <!-- Cart items will be dynamically added here -->
+      </ul>
+      <button onclick="checkout()">Checkout</button>
+    </section>
+  </main>
+  
+  <script>
+    // Retrieve cart items from localStorage or initialize as an empty array
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+    function renderCartItems() {
+      const cartList = document.getElementById('cart-items');
+      cartList.innerHTML = '';
+      cartItems.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        cartList.appendChild(li);
+      });
+    }
+
+    function updateCartCount() {
+      const cartCountElement = document.querySelector('a[href="add_to_cart.html"] span');
+      cartCountElement.textContent = cartItems.length;
+    }
+
+    function checkout() {
+      // Implement checkout logic here
+      alert('Checkout functionality is not implemented in this demo.');
+    }
+
+    // Render cart items and update cart count on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCartItems();
+      updateCartCount();
+    });
+  </script>
+</body>
+</html>
+
+  </script>
+</body>
+</html>
